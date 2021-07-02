@@ -17,6 +17,22 @@ body {
 	display: flex;
 }
 
+a {
+	text-decoration: none;
+	color: rgba(255, 255, 255, 0.4);
+}
+
+a:hover {
+	color: white;
+}
+
+a > img {
+	opacity: 0.8;
+}
+
+a > img:hover {
+	opacity: 1;
+}
 /*  Definisco le dimensioni della webapp */
 #wrapper {
 	width: 100%;
@@ -37,10 +53,11 @@ main {
 	width: 250px;
 	background: #000000;
 	color: grey;
+	font-size: 14px;
 }
 
 .logo {
-	padding: 20px;
+	padding: 20px 0;
 }
 .logo > img:nth-child(1) {
 	width: 70%;
@@ -49,6 +66,7 @@ main {
 #aside-top {
 	height: calc(100% - 90px);
 	flex-direction: column;
+	padding-left: 20px;
 }
 
 #aside-bottom {
@@ -57,21 +75,37 @@ main {
 
 #aside-top > ul {
 	list-style: none;
-	padding-left: 20px;
+	padding-bottom: 20px;
 }
 
 #aside-top > ul > li {
-	margin: 5px 0;
+	margin: 10px 0;
 }
-#aside-top > ul > li > a {
-	text-decoration: none;
-	color: grey;
-}
+
 #aside-top > ul > li > a > img {
 	height: 25px;
 	vertical-align: middle;
 	padding-right: 5px;
 }
+#aside-top > h3 {
+	color: white;
+	font-size: 14px;
+	padding-bottom: 10px;
+}
+
+.new-playlist > span:nth-child(1) {
+	display: inline-block;
+	background-color: rgba(255, 255, 255, 0.4);
+	height: 30px;
+	width: 30px;
+	line-height: 30px;
+	font-size: 28px;
+	color: black;
+	text-align: center;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+
 .main-content {
 	height: 100%;
 	width: calc(100% - 250px);
