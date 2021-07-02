@@ -4,11 +4,54 @@
 	box-sizing: border-box;
 }
 
+body {
+	font-family: 'Montserrat', sans-serif;
+}
 /* Common */
 
 .float {
 	float: left;
 }
+
+.clearfix::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+/* Main */
+.wrapper > main > nav {
+	color: #616161;
+}
+
+.wrapper > main > nav > .nav-logo {
+	padding: 20px;
+}
+.wrapper > main > nav > .nav-logo > img {
+	width: 70%;
+}
+
+.wrapper > main > nav > .main-nav > ul {
+	list-style: none;
+	padding-left: 20px;
+	font-size: 14px;
+}
+
+.wrapper > main > nav > .main-nav > ul > li {
+	padding: 5px 0;
+}
+
+.wrapper > main > nav > .main-nav > ul > li > a {
+	text-decoration: none;
+	color: white;
+}
+
+.wrapper > main > nav > .main-nav > ul > li > a > img {
+	height: 30px;
+	vertical-align: middle;
+}
+
+/* Footer */
 
 /* !DEBUG ZONE! */
 /*  Definisco le dimensioni della webapp */
@@ -29,7 +72,7 @@
 	background: #282828;
 }
 
-.debug nav {
+.wrapper > main > nav {
 	height: 100%;
 	width: 250px;
 	background: #000000;
