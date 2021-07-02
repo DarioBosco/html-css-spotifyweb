@@ -57,8 +57,9 @@ main {
 }
 
 .logo {
-	padding: 20px 0;
+	padding: 20px;
 }
+
 .logo > img:nth-child(1) {
 	width: 70%;
 }
@@ -66,34 +67,51 @@ main {
 #aside-top {
 	height: calc(100% - 90px);
 	flex-direction: column;
-	padding-left: 20px;
 }
 
 #aside-bottom {
 	height: 90px;
 }
 
-#aside-top > ul {
+#aside-top ul {
 	list-style: none;
 	padding-bottom: 20px;
 }
 
-#aside-top > ul > li {
+#aside-top ul li {
 	margin: 10px 0;
 }
 
-#aside-top > ul > li > a > img {
+#aside-top ul li a img {
 	height: 25px;
 	vertical-align: middle;
 	padding-right: 5px;
+}
+
+#aside-top > ul > li,
+#aside-top > h3,
+.new-playlist {
+	border-left: 3px solid transparent;
+	padding-left: 17px;
+	line-height: 30px;
+}
+
+/* Sovrasscrive il bordo trasparente dandogli un colore */
+#aside-top > ul:nth-child(2) > li:nth-child(1) {
+	border-left: 3px solid #99e22d;
 }
 #aside-top > h3 {
 	color: white;
 	font-size: 14px;
 	padding-bottom: 10px;
 }
+.new-playlist {
+	flex-direction: row-reverse;
+	/* justify-content: flex-end; */
+}
 
-.new-playlist > span:nth-child(1) {
+/* Rimuovere ed iniettare con il CSS direttamente */
+.new-playlist > a > span:nth-child(1) {
 	display: inline-block;
 	background-color: rgba(255, 255, 255, 0.4);
 	height: 30px;
@@ -103,7 +121,13 @@ main {
 	color: black;
 	text-align: center;
 	vertical-align: middle;
-	margin-right: 10px;
+}
+.new-playlist > a > span:nth-child(2) {
+	padding-left: 10px;
+}
+
+.new-playlist > a > span:hover + .new-playlist > a > span:nth-child(1) {
+	background-color: white;
 }
 
 .main-content {
