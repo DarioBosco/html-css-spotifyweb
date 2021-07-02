@@ -125,6 +125,14 @@ main {
 	margin-right: 10px;
 }
 
+/* Applico l'effetto bianco con hover alla creazione di una nuova playlist */
+.new-playlist:hover a {
+	color: white;
+}
+.new-playlist:hover span:before {
+	background-color: white;
+}
+
 #aside-bottom {
 	height: 80px;
 	padding: 0 20px;
@@ -133,7 +141,13 @@ main {
 }
 
 #aside-bottom > .download-app > span {
+	font-size: 13px;
+	color: white;
+}
+
+#aside-bottom > .download-app > i {
 	font-size: 12px;
+	color: white;
 }
 
 #aside-bottom .profile {
@@ -149,12 +163,13 @@ main {
 	border-radius: 50%;
 }
 
+.profile-img {
+	padding-right: 10px;
+}
+
 #aside-bottom > .profile > .profile-name > h2 {
 	font-size: 14px;
 	color: white;
-}
-
-#aside-bottom .download-app {
 }
 
 .main-content {
