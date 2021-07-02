@@ -16,13 +16,16 @@
 	</head>
 
 	<body class="debug">
-		<div class="wrapper">
+		<!-- Wrapper che da le dimensioni alla webapp -->
+		<div id="wrapper">
 			<main>
-				<nav class="float">
-					<div class="nav-logo">
-						<img src="./img/logo.svg" alt="Spotify" />
-					</div>
-					<nav class="main-nav">
+				<!-- Barra laterale -->
+				<aside class="float-left">
+					<!-- Contenitore superiore -->
+					<div id="aside-top" class="flex">
+						<div class="logo">
+							<img src="./img/logo.svg" alt="Spotify" />
+						</div>
 						<ul>
 							<li>
 								<a href="#">
@@ -43,9 +46,12 @@
 								</a>
 							</li>
 						</ul>
-					</nav>
-				</nav>
-				<div class="main-content float"></div>
+					</div>
+					<!-- Contenitore inferiore -->
+					<div id="aside-bottom" class="flex"></div>
+				</aside>
+				<!-- Corpo principale -->
+				<div class="main-content float-left"></div>
 			</main>
 			<footer></footer>
 		</div>
