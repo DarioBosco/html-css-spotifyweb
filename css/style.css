@@ -239,6 +239,20 @@ main {
 	padding: 20px;
 }
 
+.main-content section.albums section {
+	padding: 20px 0;
+}
+
+.main-content section.albums section h2 {
+	padding-bottom: 20px;
+}
+
+.main-content section.albums section p {
+	color: grey;
+	font-size: 12px;
+	padding-bottom: 30px;
+}
+
 .albums-list {
 	display: flex;
 	list-style-type: none;
