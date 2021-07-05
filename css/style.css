@@ -242,12 +242,13 @@ main {
 .albums-list {
 	display: flex;
 	list-style-type: none;
-	justify-content: space-around;
+	justify-content: flex-start;
 	font-size: 13px;
 }
 
 .album {
 	width: calc(100% / 6 - 20px);
+	margin-right: 20px;
 }
 
 .album-cover {
