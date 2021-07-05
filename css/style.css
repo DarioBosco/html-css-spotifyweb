@@ -230,6 +230,21 @@ main {
 	padding-top: 10px;
 }
 
+.main-content--nav > ul > li:first-child {
+	position: relative;
+}
+
+.main-content--nav > ul > li:first-child > a::after {
+	content: '';
+	height: 3px;
+	width: 30px;
+	background: #99e22d;
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	transform: translate(-50%);
+}
+
 .main-content--nav ul li {
 	padding: 10px;
 }
