@@ -41,6 +41,10 @@ a > img:hover {
 	opacity: 1;
 }
 
+ul {
+	list-style: none;
+}
+
 /*  Definisco le dimensioni della webapp */
 #wrapper {
 	width: 100%;
@@ -56,25 +60,12 @@ main {
 	height: calc(100% - 90px);
 }
 
-#wrapper > main > aside {
+#wrapper main aside {
 	height: 100%;
 	width: 230px;
 	background: #000000;
 	color: grey;
 	font-size: 13px;
-}
-
-.logo,
-.playlist {
-	padding: 20px;
-}
-
-.logo > img {
-	color: white;
-}
-
-.logo > img:nth-child(1) {
-	width: 70%;
 }
 
 #aside-top {
@@ -84,33 +75,39 @@ main {
 	min-height: 300px;
 }
 
-ul {
-	list-style: none;
+.aside-top--logo,
+.aside-top--playlist {
+	padding: 20px;
 }
 
-.playlist > ul {
+.aside-top--logo img {
+	color: white;
+	width: 70%;
+}
+
+.aside-top--playlist ul {
 	overflow-y: auto;
 }
 
-#aside-top ul li a img {
-	height: 25px;
-	vertical-align: middle;
-	padding-right: 5px;
-}
-
-#aside-top > ul:nth-child(2) > li {
+.aside-top--nav ul li {
 	border-left: 3px solid transparent;
 	margin-top: 5px;
 	padding-left: 17px;
 	line-height: 35px;
 }
 
-/* Sovrasscrive il bordo trasparente dandogli un colore */
-#aside-top > ul:nth-child(2) > li:nth-child(1) {
+.aside-top--nav ul li a img {
+	height: 25px;
+	vertical-align: middle;
+	padding-right: 5px;
+}
+
+/* Tasto Home */
+.aside-top--nav ul li:first-child {
 	border-left: 3px solid #99e22d;
 }
 
-.playlist > ul:nth-child(3) > li {
+.aside-top--playlist ul li {
 	line-height: 35px;
 }
 
@@ -120,7 +117,7 @@ ul {
 	padding-bottom: 10px;
 }
 
-.new-playlist > a > span::before {
+.new-playlist a span::before {
 	content: '+';
 	display: inline-block;
 	background-color: rgba(255, 255, 255, 0.6);
@@ -149,17 +146,18 @@ ul {
 	justify-content: space-around;
 }
 
-#aside-bottom > .download-app > span {
+#aside-bottom .download-app span {
 	font-size: 13px;
 }
 
-#aside-bottom > .download-app:hover {
+#aside-bottom .download-app:hover {
 	color: white;
 	cursor: pointer;
 }
 
-#aside-bottom > .download-app > i {
+#aside-bottom .download-app i {
 	font-size: 12px;
+	padding-right: 5px;
 }
 
 #aside-bottom .profile {
@@ -167,7 +165,7 @@ ul {
 	align-items: center;
 }
 
-#aside-bottom > .profile > .profile-img > img {
+#aside-bottom .profile .profile-img img {
 	vertical-align: middle;
 	height: 25px;
 	width: 25px;
@@ -179,7 +177,7 @@ ul {
 	padding-right: 10px;
 }
 
-#aside-bottom > .profile > .profile-name > h2 {
+#aside-bottom .profile .profile-name h2 {
 	font-size: 13px;
 	color: white;
 }
@@ -199,13 +197,13 @@ ul {
 	position: fixed;
 }
 
-.music-nav {
+.main-content--nav {
 	justify-content: center;
 	margin: 10px 0;
 	font-size: 13px;
 }
 
-.music-nav li {
+.main-content--nav ul li {
 	padding: 10px;
 }
 
@@ -222,37 +220,6 @@ footer {
 
 /* FINE FOOTER */
 /* ------------------------------------------------------------------------------------------------ */
-
-/* !DEBUG ZONE! */
-/*  Definisco le dimensioni della webapp */
-.debug #wrapper {
-	width: 100%;
-	height: 100vh;
-}
-
-/* Utilizzo il calc per la successiva reponsivita' verticale*/
-.debug main {
-	width: 100%;
-	height: calc(100% - 90px);
-}
-
-.debug footer {
-	width: 100%;
-	height: 100px;
-	background: #282828;
-}
-
-#wrapper > main > aside {
-	height: 100%;
-	width: 230px;
-	background: #000000;
-}
-
-.debug .main-content {
-	height: 100%;
-	width: calc(100% - 230px);
-	background: #141922;
-}
 
 /* Colori
 
