@@ -27,7 +27,9 @@ a {
 	color: rgba(255, 255, 255, 0.4);
 }
 
-a:hover {
+a:hover,
+a:active,
+a:focus {
 	color: white;
 }
 
@@ -79,14 +81,15 @@ main {
 	height: calc(100% - 80px);
 	flex-direction: column;
 	overflow: hidden;
+	min-height: 300px;
 }
 
 ul {
 	list-style: none;
 }
 
-#aside-top > ul:nth-child(5) {
-	overflow: auto;
+.playlist > ul {
+	overflow-y: auto;
 }
 
 #aside-top ul li a img {
@@ -97,6 +100,7 @@ ul {
 
 #aside-top > ul:nth-child(2) > li {
 	border-left: 3px solid transparent;
+	margin-top: 5px;
 	padding-left: 17px;
 	line-height: 35px;
 }
@@ -213,6 +217,7 @@ footer {
 	width: 100%;
 	height: 90px;
 	background: #282828;
+	z-index: 100;
 }
 
 /* FINE FOOTER */
