@@ -202,18 +202,32 @@ main {
 }
 
 .main-content .upgrade {
-	width: 100%;
+	width: calc(100% - 230px);
 	height: 90px;
 	background: rgba(0, 0, 0, 0.3);
 	position: fixed;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 25px;
+}
+
+.main-content .upgrade .upgrade-btn {
+	border: 1px solid white;
+	border-radius: 40px;
+	font-size: 13px;
 	color: white;
+	padding: 15px 40px;
+}
+
+.main-content .upgrade .upgrade-btn:hover {
+	transform: scale(1.1);
 }
 
 .main-content--nav {
 	justify-content: center;
-	margin: 10px 0;
 	font-size: 13px;
-	padding-top: 90px;
+	margin-top: 90px;
+	padding-top: 10px;
 }
 
 .main-content--nav ul li {
