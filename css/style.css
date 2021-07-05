@@ -293,6 +293,11 @@ main {
 	text-align: center;
 	padding-top: 20px;
 }
+
+.artists img,
+.artists .layover {
+	border-radius: 50%;
+}
 /* FINE MAIN */
 /* ------------------------------------------------------------------------------------------------ */
 /* FOOTER */
