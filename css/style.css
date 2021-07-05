@@ -37,8 +37,12 @@ a > img {
 	opacity: 0.8;
 }
 
-a > img:hover {
+li:hover img {
 	opacity: 1;
+}
+
+li:hover span {
+	color: white;
 }
 
 ul {
@@ -68,6 +72,7 @@ main {
 	font-size: 13px;
 }
 
+/* ! ------------------------------------------------ */
 #aside-top {
 	height: calc(100% - 80px);
 	flex-direction: column;
@@ -85,6 +90,7 @@ main {
 	width: 70%;
 }
 
+/* ! ------------------------------------------------ */
 .aside-top--playlist ul {
 	overflow-y: auto;
 }
@@ -135,6 +141,7 @@ main {
 .new-playlist:hover a {
 	color: white;
 }
+
 .new-playlist:hover span:before {
 	background-color: white;
 }
@@ -190,6 +197,7 @@ main {
 	overflow: auto;
 	flex-direction: column;
 }
+
 .upgrade {
 	width: 100%;
 	height: 90px;
