@@ -260,6 +260,8 @@ main {
 /* Inizio degli album */
 .main-content section.albums {
 	padding: 20px;
+	animation-name: appear;
+	animation-duration: 5s;
 }
 
 .main-content section.albums section {
@@ -546,5 +548,24 @@ footer ul li i {
 
 	#aside-bottom .download-app i {
 		padding: 0;
+	}
+}
+
+@media screen and (max-height: 600px) {
+	.main-content .upgrade {
+		display: none;
+	}
+
+	.main-content--nav {
+		margin-top: 0;
+	}
+}
+
+@keyframes appear {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
 	}
 }
