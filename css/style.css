@@ -265,8 +265,7 @@ footer {
 .player-controller-controls {
 	justify-content: center;
 	align-items: center;
-	height: 50%;
-	background: green;
+	height: 60%;
 }
 .player-controller-controls ul {
 	line-height: 35px;
@@ -286,17 +285,43 @@ footer {
 }
 
 .player-controller-progressbar {
-	background: red;
 	justify-content: space-between;
 	align-items: center;
+	font-size: 10px;
 }
 
 .player-controller-progressbar-bar {
-	width: 75%;
+	width: 80%;
+	height: 5px;
+	border-radius: 5px;
+	background: rgba(255, 255, 255, 0.2);
+	cursor: pointer;
+}
+
+.player-controller-progressbar-bar > .elapsed-bar {
+	width: 25%;
 	height: 5px;
 	border-radius: 5px;
 	background: rgba(255, 255, 255, 0.8);
-	cursor: pointer;
+	position: relative;
+}
+
+.player-controller-progressbar-bar > .elapsed-bar > .fa-circle {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin-top: -5px;
+	margin-right: -5px;
+	font-size: 14px;
+	visibility: hidden;
+}
+
+.player-controller-progressbar-bar:hover .fa-circle {
+	visibility: visible;
+}
+
+.player-controller-progressbar-bar:hover .elapsed-bar {
+	background: #99e22d;
 }
 
 .player-audio {
