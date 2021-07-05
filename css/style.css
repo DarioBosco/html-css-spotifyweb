@@ -6,6 +6,7 @@
 
 body {
 	font-family: 'Montserrat', sans-serif;
+	color: white;
 }
 /* COMMON */
 
@@ -24,7 +25,7 @@ body {
 
 a {
 	text-decoration: none;
-	color: rgba(255, 255, 255, 0.4);
+	color: grey;
 }
 
 a:hover,
@@ -129,7 +130,7 @@ main {
 .new-playlist a span::before {
 	content: '+';
 	display: inline-block;
-	background-color: rgba(255, 255, 255, 0.6);
+	background: rgba(255, 255, 255, 0.6);
 	height: 38px;
 	width: 38px;
 	line-height: 38px;
@@ -146,7 +147,7 @@ main {
 }
 
 .new-playlist:hover span:before {
-	background-color: white;
+	background: white;
 }
 
 #aside-bottom {
@@ -179,7 +180,7 @@ main {
 	vertical-align: middle;
 	height: 25px;
 	width: 25px;
-	background-color: grey;
+	background: grey;
 	border-radius: 50%;
 }
 
@@ -203,7 +204,7 @@ main {
 .main-content .upgrade {
 	width: 100%;
 	height: 90px;
-	background-color: rgba(0, 0, 0, 0.3);
+	background: rgba(0, 0, 0, 0.3);
 	position: fixed;
 	color: white;
 }
@@ -228,6 +229,87 @@ footer {
 	height: 90px;
 	background: #282828;
 	z-index: 100;
+}
+
+.player {
+	width: 100%;
+	height: 100%;
+	justify-content: space-between;
+}
+
+.player-album {
+	width: 230px; /* Width come <aside> */
+	justify-content: space-around;
+	align-items: center;
+	color: grey;
+	padding: 10px;
+}
+
+.player-album-song h2 {
+	font-size: 12px;
+	line-height: 12px;
+}
+
+.player-album-song p {
+	font-size: 10px;
+}
+
+.player-album-icons a {
+	padding-left: 10px;
+}
+
+.player-controller {
+	width: 40%;
+}
+
+.player-controller-controls {
+	justify-content: center;
+	align-items: center;
+	height: 50%;
+	background: green;
+}
+.player-controller-controls ul {
+	line-height: 35px;
+	font-size: 13px;
+	align-items: center;
+}
+.player-controller-controls ul li i {
+	margin: 10px;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.player-controller-controls > ul > li:nth-child(3) i {
+	width: 50px;
+	font-size: 30px;
+	text-align: center;
+}
+
+.player-controller-progressbar {
+	background: red;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.player-controller-progressbar-bar {
+	width: 75%;
+	height: 5px;
+	border-radius: 5px;
+	background: rgba(255, 255, 255, 0.8);
+	cursor: pointer;
+}
+
+.player-audio {
+	background: red;
+	width: 230px;
+}
+
+.player-album-cover {
+	width: 50px;
+}
+
+.player-album-cover img {
+	width: 100%;
 }
 
 /* FINE FOOTER */
