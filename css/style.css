@@ -80,18 +80,20 @@ main {
 	min-height: 300px;
 }
 
-.aside-top--logo,
-.aside-top--playlist {
-	padding: 20px;
-}
-
 .aside-top--logo img {
 	color: white;
 	width: 70%;
+	padding: 20px;
+}
+
+.aside-top--logo .logo-mobile {
+	display: none;
+	width: 50px;
 }
 
 .aside-top--playlist {
 	overflow: hidden;
+	padding: 20px;
 }
 
 .aside-top--playlist ul {
@@ -230,6 +232,11 @@ main {
 	padding-top: 10px;
 }
 
+.main-content--nav > ul {
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
 .main-content--nav > ul > li:first-child {
 	position: relative;
 }
@@ -247,6 +254,7 @@ main {
 
 .main-content--nav ul li {
 	padding: 10px;
+	white-space: nowrap;
 }
 
 /* Inizio degli album */
@@ -273,6 +281,7 @@ main {
 	list-style-type: none;
 	justify-content: flex-start;
 	font-size: 13px;
+	flex-wrap: wrap;
 }
 
 .album {
@@ -449,16 +458,93 @@ footer ul li i {
 
 .player-album-cover img {
 	width: 100%;
+	padding-right: 10px;
 }
 
 /* FINE FOOTER */
 /* ------------------------------------------------------------------------------------------------ */
 
-/* Colori
-!footer: #282828
-!nav: #000000
-!main-content: #141922
-!upgrade: #080b12
-!nav centrale: #141922
-!lime: #99e22d
-*/
+@media screen and (max-width: 1100px) {
+	.album {
+		width: calc(100% / 4 - 20px);
+		margin-right: 20px;
+	}
+}
+
+@media screen and (max-width: 660px) {
+	.album {
+		width: calc(100% / 2 - 20px);
+		margin-right: 20px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	#wrapper main aside {
+		width: 50px;
+	}
+
+	.aside-top--logo > img {
+		display: none;
+	}
+
+	.aside-top--logo .logo-mobile {
+		display: block;
+		width: 50px;
+		padding: 10px;
+	}
+
+	.main-content,
+	.main-content .upgrade {
+		width: calc(100% - 50px);
+	}
+
+	.aside-top--nav ul {
+		text-align: center;
+	}
+
+	.aside-top--nav ul li {
+		border-left: 0;
+		padding: 0;
+	}
+
+	.aside-top--nav .active {
+		border-left: 0;
+	}
+
+	.aside-top--nav ul li a img {
+		padding: 0;
+	}
+
+	.aside-top--nav ul li a span {
+		display: none;
+	}
+
+	.aside-top--playlist {
+		display: none;
+	}
+
+	#aside-bottom .download-app span {
+		display: none;
+	}
+
+	#aside-bottom {
+		padding: 0;
+		align-items: center;
+	}
+
+	#aside-bottom hr {
+		display: none;
+	}
+
+	#aside-bottom .profile .profile-name h2 {
+		display: none;
+	}
+
+	.profile-img {
+		padding: 0;
+	}
+
+	#aside-bottom .download-app i {
+		padding: 0;
+	}
+}
